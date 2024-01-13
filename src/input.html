@@ -1,0 +1,644 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&family=Public+Sans:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="../dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="./output.css" rel="stylesheet">
+</head>
+<body>
+    <nav id="menu" class="nav w-full z-30">
+        <div id="navSection" class="navber">
+        <div class="flex justify-between items-center ">
+            <div class="w-1/3 ">
+                <div class="flex gap-3  w-[30%] ">
+                    <div class="w-full flex gap-3 justify-center items-center">
+                      <a href="#">
+                        <i class="md:hidden block ">
+                          <div class="relative w-10">
+                            <a onclick="myFunction()" class="dd1 text-2xl" href="#dd1">
+                                <i class="fa-solid fa-bars"></i>
+                            </a>
+                            <ul class="jsDropdown absolute top-9 left-0 bg-gray-400 rounded-lg hidden">
+                                <li class="text-xl font-semibold hover:bg-[#924aef] px-2 hover:text-white">
+                                    <a class="" href="#">
+                                        Home
+                                    </a>
+                                </li>
+                                <li class="text-xl font-semibold hover:bg-[#924aef] px-2 hover:text-white">
+                                    <a class="" href="#">
+                                        Manu
+                                    </a>
+                                </li>
+                                <li class="text-xl font-semibold hover:bg-[#924aef] px-2 hover:text-white">
+                                    <a class="" href="#">
+                                        Contact
+                                    </a>
+                                </li>
+                                <li class="text-xl font-semibold hover:bg-[#924aef] px-2 hover:text-white">
+                                    <a class="" href="#">
+                                        About
+                                        
+                                    </a>
+                                </li>
+                            </ul> 
+                        </div>
+                        </i>
+                      </a>
+                      
+                        <a class="w-full md:block hidden" href="#">
+                            <img class=" w-full" src="Group 1.png" alt="">
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="w-1/3 md:block hidden ">
+                <ul class="flex gap-6 justify-between font-bold">
+                    <li>
+                        <a href="#">
+                          <div class="container mx-auto  px-4">
+                            <ul class="flex font-bold">
+                               
+                                <li
+                                    class="mr-4"
+                                    x-data="{ isOpen: false, timeout: null }"
+                                    x-on:mouseenter="isOpen = true; clearTimeout(timeout)"
+                                    x-on:mouseleave="timeout = setTimeout(() => { isOpen = false }, 300)"
+                                >
+                                    <a class="hover:text-yellow-600" href="#">
+                                      Home
+                                    </a>
+                                    <ul x-show="isOpen" class="absolute bg-gray-200  rounded-lg w-[200px] ">
+                                        <li class="hover:bg-gray-400 py-2 px-2">
+                                            <a href="#">Page 1</a>
+                                        </li>
+                                        <li class="hover:bg-gray-400 py-2 px-2">
+                                            <a href="#">Page 2</a>
+                                        </li>
+                                        <li class="hover:bg-gray-400 py-2 px-2 mr-4">
+                                            <a href="#">
+                                              <div class="container mx-auto ">
+                                                <ul class="flex w-full ">
+                                                   
+                                                    <li class="mr-4"
+                                                        x-data="{ isOpen: false, timeout: null }"
+                                                        x-on:mouseenter="isOpen = true; clearTimeout(timeout)"
+                                                        x-on:mouseleave="timeout = setTimeout(() => { isOpen = false }, 300)">
+                                                        <a href="#">Page 3</a>
+                                                        
+                                                        <ul x-show="isOpen" class="absolute bg-gray-200  rounded-lg w-[200px] ">
+                                                            <li class="hover:bg-gray-400 py-2 px-2">
+                                                                <a href="#">Page 1</a>
+                                                            </li>
+                                                            <li class="hover:bg-gray-400 py-2 px-2">
+                                                                <a href="#">Page 2</a>
+                                                            </li>
+                                                            <li class="hover:bg-gray-400 py-2 px-2">
+                                                                <a href="#">Page 3</a>
+                                                            </li>
+                                                            <li class="hover:bg-gray-400 py-2 px-2">
+                                                                <a href="#">Page 4</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    
+                                                   
+                                                </ul>
+                                            </div>
+                                            </a>
+                                        </li>
+                                        <li class="hover:bg-gray-400 py-2 px-2">
+                                            <a href="#">Page 4</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            
+                            <div class="">
+
+                              <div class="dropdown inline-block relative">
+                                <button class=" font-bold  rounded inline-flex items-center">
+                                  <span class="mr-1 hover:text-yellow-600">
+                                    Manu
+                                  </span>
+                                  <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/> </svg>
+                                </button>
+                                <ul class="dropdown-menu absolute hidden text-gray-700 pt-1 w-[300px] dropdown:hover display-block">
+                                  <li class=""><a class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-10 block whitespace-no-wrap" href="#">One</a></li>
+                                  <li class=""><a class="bg-gray-200 hover:bg-gray-400 py-2 px-10 block whitespace-no-wrap" href="#">Two</a></li>
+                                  <li class=""><a class="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-10 block whitespace-no-wrap" href="#">Three is the magic number</a></li>
+                                </ul>
+                              </div>
+                            
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="hover:text-yellow-600" href="#">
+                            Contact
+                        </a>
+                    </li>
+                    <li>
+                        <a class="hover:text-yellow-600" href="#">
+                            
+                            <a class="text-zinc-400">
+                              <div class="z-10 w-full h-full flex items-center justify-center">
+                                  <button id="modal-button" class=" text-lg text-black  px-4 ">About</button> <!--Open Modal -->
+                               </div> 
+                                 <div id="modal" class="hidden items-center justify-center h-screen w-screen fixed top-0 left-0 bg-black bg-opacity-60 z-10"> <!--Modal Dialog -->
+                                     <div class="bg-white max-w-xl w-full rounded-md z-10"> <!--Modal Content -->
+                                          <div class="p-3 flex items-center justify-between border-b border-b-gray-300"> <!--Modal Header -->
+                                             <h3 class="font-semibold text-xl">Modal Header</h3>
+                                             <span class="modal-close cursor-pointer">×</span> <!-- Close Modal -->
+                                         </div>
+                                         <div class="p-3 border-b border-b-gray-300"> <!--Modal Body -->
+                                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                 Nam excepturi repellendus amet, alias quia tenetur aut, perspiciatis assumenda deserunt iusto
+                                                 incidunt.</p>
+                                         </div>
+                                         <div class="p-3 flex items-center justify-start"> <!--Modal Footer -->
+                                             <div>
+                                                 <button class="modal-close text-sm text-white bg-blue-500 rounded-md px-4 py-2">Accept</button>
+                                                 <button class="modal-close text-sm text-gray-400 border rounded-md px-4 py-2">Decline</button> <!-- Close Modal -->
+                                             </div>
+                                         </div>
+                                     </div>
+                                 </div>
+                          </a>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex gap-4 w-1/3 justify-end ">
+                <div class="flex gap-6">
+                    <div class="relative w-10 md:block hidden">
+                        <a onclick="myFunction()" class="dd1 text-2xl" href="#dd1">
+                            <i class="fa-regular fa-bell"></i>
+                        </a>
+                        <ul class="jsDropdown absolute top-9 right-0  hidden">
+                            <li class="text-xl font-semibold hover:bg-[#924aef] px-10 hover:text-white">
+                                <a class="" href="#">
+                                    Eng(US)
+                                </a>
+                            </li>
+                            <li class="text-xl font-semibold hover:bg-[#924aef] px-10 hover:text-white">
+                                <a class="" href="#">
+                                    Franch
+                                </a>
+                            </li>
+                            <li class="text-xl font-semibold hover:bg-[#924aef] px-10 hover:text-white">
+                                <a class="" href="#">
+                                    German
+                                </a>
+                            </li>
+                            <li class="text-xl font-semibold hover:bg-[#924aef] px-10 hover:text-white">
+                                <a class="" href="#">
+                                    Spanish
+                                </a>
+                            </li>
+                        </ul>
+                        <span class="absolute top-1 left-3  text-[10px] rounded-xl bg-sky-500 px-1 text-slate-100">2</span>
+                    </div>
+
+                    <div class="relative w-10">
+                        <a onclick="myFunction2()" class="dd1 " href="#dd1">
+                            <img class="w-full rounded-full" src="9.jpg" alt="">
+                        </a>
+                            <ul class="w-10 jsDropdown2  absolute top-30 right-0  hidden">
+                                <li class="my-1">
+                                    <a class="" href="#">
+                                        <img class=" w-full rounded-full" src="2.jpg" alt="">
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a class="" href="#">
+                                        <img class="w-full rounded-full" src="7.jpg" alt="">
+                                    </a>
+                                </li>
+                                <li class="my-1">
+                                    <a class="" href="#">
+                                        <img class="w-full rounded-full" src="8.jpg" alt="">
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a class="" href="#">
+                                        <img class="w-full rounded-full" src="10.jpg" alt="">
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                    </div>
+                </div> 
+            </div>
+        </div>
+  </nav>
+
+
+      <!-- Slider -->
+        <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Alpine.js -->
+    <script src="//unpkg.com/alpinejs" defer></script>
+
+    <div class="w-full h-2/6 flex items-center justify-center ">
+          <div class="w-f">
+            <div
+              x-data="{ activeSlide: 1, slideCount: 3 }"
+              class="overflow-hidden relative"
+            >
+              <!-- Slider -->
+              <!-- You can remove x-init if you dont want to autoplay -->
+              <div
+                class="whitespace-nowrap transition-transform duration-500 ease-in-out"
+                :style="'transform: translateX(-' + (activeSlide - 1) * 100.5 + '%)'"
+                x-init="setInterval(() => { activeSlide = activeSlide < slideCount ? activeSlide + 1 : 1 }, 5000)"
+              >
+                <!-- Item 1 -->
+                <div class="inline-block w-full">
+                  <img
+                    src="https://cdn.discordapp.com/attachments/1115232925227696158/1162509591804907720/maxresdefault.jpg?ex=656a56ed&is=6557e1ed&hm=8439a4c4ffe78fe86a5f0fade9c242bccd66293c31a191a1c0bdcf4e8e5b593a&"
+                    alt=""
+                  />
+                </div>
+                <!-- Item 2 -->
+                <div class="inline-block w-full">
+                  <img
+                    src="https://media.discordapp.net/attachments/1115232925227696158/1162511573454159972/U._couldy_nepal_ultra_realistic_drawn_oil_paint_artistic_breath_0729cff6-4a55-47b0-a1d3-869fddded125.png?ex=656a58c5&is=6557e3c5&hm=51a843affeb728b251fdaf8a32bb0a9d024022a24e04b76b5e04313079724ef3&=&width=1838&height=1030"
+                    alt=""
+                  />
+                </div>
+                <!-- Item 3 -->
+                <div class="inline-block w-full">
+                  <img
+                    src="https://media.discordapp.net/attachments/1115232925227696158/1176582193225674772/U._nepal_drawing_high_quality_detailed_b154b6b8-92d4-454d-b341-adef69152b5a.png?ex=656f648e&is=655cef8e&hm=6e6c76d481936f8115244a413165cd6a93fd686b4a9c83ee22ad378d70fffe8d&=&width=1838&height=1030"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <!-- Prev/Next Arrows -->
+              <div class="absolute inset-0 flex items-center justify-between px-2">
+                <button
+                  @click="activeSlide = activeSlide > 1 ? activeSlide - 1 : slideCount"
+                  class="w-[30px] h-[30px] flex items-center bg-black/30 text-white p-2 rounded-full"
+                >
+                  &#8592;
+                </button>
+                <button
+                  @click="activeSlide = activeSlide < slideCount ? activeSlide + 1 : 1"
+                  class="w-[30px] h-[30px] flex items-center bg-black/30 text-white p-2 rounded-full"
+                >
+                  &#8594;
+                </button>
+              </div>
+
+              <!-- Dots Navigation -->
+              <div
+                class="absolute bottom-0 left-0 right-0 flex justify-center space-x-2 p-4"
+              >
+                <template x-for="slideIndex in slideCount" :key="slideIndex">
+                  <button
+                    @click="activeSlide = slideIndex"
+                    class="h-2 w-2 rounded-full"
+                    :class="{'bg-orange-500': activeSlide === slideIndex, 'bg-white/50': activeSlide !== slideIndex}"
+                  ></button>
+                </template>
+              </div>
+            </div>
+          </div>
+    </div>
+
+
+      <div class="w-full">
+        <div class="relative font-inter antialiased ">
+
+          <main class="relative min-h-screen flex flex-col justify-center bg-slate-50 overflow-hidden px-20">
+              <div class="w-full  mx-auto px-4 md:px-6 py-14">
+      
+                  <h1 class="text-2xl font-bold text-slate-900 mb-4">FAQs</h1>
+      
+                  <!-- Accordion component -->
+                  <div class="divide-y divide-slate-200">
+                      <!-- Accordion item -->
+                      <div x-data="{ expanded: false }" class="py-2">
+                          <h2>
+                              <button
+                                  id="faqs-title-01"
+                                  type="button"
+                                  class="flex items-center justify-between w-full text-left font-semibold py-2"
+                                  @click="expanded = !expanded"
+                                  :aria-expanded="expanded"
+                                  aria-controls="faqs-text-01"
+                              >
+                                  <span>What are the advantages of your service?</span>
+                                  <svg class="fill-indigo-500 shrink-0 ml-8" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                                      <rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out" :class="{'!rotate-180': expanded}" />
+                                      <rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out" :class="{'!rotate-180': expanded}" />
+                                  </svg>
+                              </button>
+                          </h2>
+                          <div
+                              id="faqs-text-01"
+                              role="region"
+                              aria-labelledby="faqs-title-01"
+                              class="grid text-sm text-slate-600 overflow-hidden transition-all duration-300 ease-in-out"
+                              :class="expanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'"
+                              >
+                              <div class="overflow-hidden">
+                                  <p class="pb-3">
+                                      If you go over your organisations or user limit, a member of the team will reach out about bespoke pricing. In the meantime, our collaborative features won't appear in accounts or users that are over the 100-account or 1,000-user limit.
+                                  </p>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- Accordion item -->
+                      <div x-data="{ expanded: false }" class="py-2">
+                          <h2>
+                              <button
+                                  id="faqs-title-02"
+                                  type="button"
+                                  class="flex items-center justify-between w-full text-left font-semibold py-2"
+                                  @click="expanded = !expanded"
+                                  :aria-expanded="expanded"
+                                  aria-controls="faqs-text-02"
+                              >
+                                  <span>Are there any fees or commissions in addition to the monthly subscription?</span>
+                                  <svg class="fill-indigo-500 shrink-0 ml-8" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                                      <rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out" :class="{'!rotate-180': expanded}" />
+                                      <rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out" :class="{'!rotate-180': expanded}" />
+                                  </svg>
+                              </button>
+                          </h2>
+                          <div
+                              id="faqs-text-02"
+                              role="region"
+                              aria-labelledby="faqs-title-02"
+                              class="grid text-sm text-slate-600 overflow-hidden transition-all duration-300 ease-in-out"
+                              :class="expanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'"
+                              >
+                              <div class="overflow-hidden">
+                                  <p class="pb-3">
+                                      If you go over your organisations or user limit, a member of the team will reach out about bespoke pricing. In the meantime, our collaborative features won't appear in accounts or users that are over the 100-account or 1,000-user limit.
+                                  </p>
+                              </div>
+                          </div>
+                      </div> 
+                      <!-- Accordion item -->
+                      <div x-data="{ expanded: false }" class="py-2">
+                          <h2>
+                              <button
+                                  id="faqs-title-03"
+                                  type="button"
+                                  class="flex items-center justify-between w-full text-left font-semibold py-2"
+                                  @click="expanded = !expanded"
+                                  :aria-expanded="expanded"
+                                  aria-controls="faqs-text-03"
+                              >
+                                  <span>You really don't charge per user? Why not?</span>
+                                  <svg class="fill-indigo-500 shrink-0 ml-8" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                                      <rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out" :class="{'!rotate-180': expanded}" />
+                                      <rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out" :class="{'!rotate-180': expanded}" />
+                                  </svg>
+                              </button>
+                          </h2>
+                          <div
+                              id="faqs-text-03"
+                              role="region"
+                              aria-labelledby="faqs-title-03"
+                              class="grid text-sm text-slate-600 overflow-hidden transition-all duration-300 ease-in-out"
+                              :class="expanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'"
+                              >
+                              <div class="overflow-hidden">
+                                  <p class="pb-3">
+                                      If you go over your organisations or user limit, a member of the team will reach out about bespoke pricing. In the meantime, our collaborative features won't appear in accounts or users that are over the 100-account or 1,000-user limit.
+                                  </p>
+                              </div>
+                          </div>
+                      </div> 
+                      <!-- Accordion item -->
+                      <div x-data="{ expanded: true }" class="py-2">
+                          <h2>
+                              <button
+                                  id="faqs-title-04"
+                                  type="button"
+                                  class="flex items-center justify-between w-full text-left font-semibold py-2"
+                                  @click="expanded = !expanded"
+                                  :aria-expanded="expanded"
+                                  aria-controls="faqs-text-04"
+                              >
+                                  <span>What happens when I go over my monthly active limit?</span>
+                                  <svg class="fill-indigo-500 shrink-0 ml-8" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                                    <rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out" :class="{'!rotate-180': expanded}" />
+                                    <rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out" :class="{'!rotate-180': expanded}" />
+                                </svg>
+                              </button>
+                          </h2>
+                          <div
+                              id="faqs-text-04"
+                              role="region"
+                              aria-labelledby="faqs-title-04"
+                              class="grid text-sm text-slate-600 overflow-hidden transition-all duration-300 ease-in-out"
+                              :class="expanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'"
+                              >
+                              <div class="overflow-hidden">
+                                  <p class="pb-3">
+                                      If you go over your organisations or user limit, a member of the team will reach out about bespoke pricing. In the meantime, our collaborative features won't appear in accounts or users that are over the 100-account or 1,000-user limit.
+                                  </p>
+                              </div>
+                          </div>
+                      </div> 
+                      <!-- Accordion item -->
+                      <div x-data="{ expanded: false }" class="py-2">
+                          <h2>
+                              <button
+                                  id="faqs-title-05"
+                                  type="button"
+                                  class="flex items-center justify-between w-full text-left font-semibold py-2"
+                                  @click="expanded = !expanded"
+                                  :aria-expanded="expanded"
+                                  aria-controls="faqs-text-05"
+                              >
+                                  <span>Can your service help me understand how to work with my product?</span>
+                                  <svg class="fill-indigo-500 shrink-0 ml-8" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                                      <rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out" :class="{'!rotate-180': expanded}" />
+                                      <rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out" :class="{'!rotate-180': expanded}" />
+                                  </svg>
+                              </button>
+                          </h2>
+                          <div
+                              id="faqs-text-05"
+                              role="region"
+                              aria-labelledby="faqs-title-05"
+                              class="grid text-sm text-slate-600 overflow-hidden transition-all duration-300 ease-in-out"
+                              :class="expanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'"
+                              >
+                              <div class="overflow-hidden">
+                                  <p class="pb-3">
+                                      If you go over your organisations or user limit, a member of the team will reach out about bespoke pricing. In the meantime, our collaborative features won't appear in accounts or users that are over the 100-account or 1,000-user limit.
+                                  </p>
+                              </div>
+                          </div>
+                      </div> 
+                      <!-- Accordion item -->
+                      <div x-data="{ expanded: false }" class="py-2">
+                          <h2>
+                              <button
+                                  id="faqs-title-06"
+                                  type="button"
+                                  class="flex items-center justify-between w-full text-left font-semibold py-2"
+                                  @click="expanded = !expanded"
+                                  :aria-expanded="expanded"
+                                  aria-controls="faqs-text-06"
+                              >
+                                  <span>Which third-party application do you integrate with?</span>
+                                  <svg class="fill-indigo-500 shrink-0 ml-8" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                                      <rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out" :class="{'!rotate-180': expanded}" />
+                                      <rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out" :class="{'!rotate-180': expanded}" />
+                                  </svg>
+                              </button>
+                          </h2>
+                          <div
+                              id="faqs-text-06"
+                              role="region"
+                              aria-labelledby="faqs-title-06"
+                              class="grid text-sm text-slate-600 overflow-hidden transition-all duration-300 ease-in-out"
+                              :class="expanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'"
+                              >
+                              <div class="overflow-hidden">
+                                  <p class="pb-3">
+                                      If you go over your organisations or user limit, a member of the team will reach out about bespoke pricing. In the meantime, our collaborative features won't appear in accounts or users that are over the 100-account or 1,000-user limit.
+                                  </p>
+                              </div>
+                          </div>
+                      </div> 
+                      <!-- Accordion item -->
+                      <div x-data="{ expanded: false }" class="py-2">
+                          <h2>
+                              <button
+                                  id="faqs-title-07"
+                                  type="button"
+                                  class="flex items-center justify-between w-full text-left font-semibold py-2"
+                                  @click="expanded = !expanded"
+                                  :aria-expanded="expanded"
+                                  aria-controls="faqs-text-07"
+                              >
+                                  <span>I have another question!</span>
+                                  <svg class="fill-indigo-500 shrink-0 ml-8" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                                      <rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out" :class="{'!rotate-180': expanded}" />
+                                      <rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out" :class="{'!rotate-180': expanded}" />
+                                  </svg>
+                              </button>
+                          </h2>
+                          <div
+                              id="faqs-text-07"
+                              role="region"
+                              aria-labelledby="faqs-title-07"
+                              class="grid text-sm text-slate-600 overflow-hidden transition-all duration-300 ease-in-out"
+                              :class="expanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'"
+                              >
+                              <div class="overflow-hidden">
+                                  <p class="pb-3">
+                                      If you go over your organisations or user limit, a member of the team will reach out about bespoke pricing. In the meantime, our collaborative features won't appear in accounts or users that are over the 100-account or 1,000-user limit.
+                                  </p>
+                              </div>
+                          </div>
+                      </div>                                                                                                
+                  </div>
+                  <!-- End: Accordion component -->
+      
+              </div>
+          </main>
+      
+        
+      
+          <!-- Banner with links -->
+          <div class="fixed bottom-0 right-0 w-full md:bottom-6 md:right-12 md:w-auto z-50" :class="bannerOpen ? '' : 'hidden'" x-data="{ bannerOpen: true }">
+              <div class="bg-slate-800 text-sm p-3 md:rounded shadow flex justify-between">
+                  <div class="text-slate-500 inline-flex">
+                      <a class="font-medium hover:underline text-slate-300" href="https://cruip.com/building-a-simple-animated-accordion-component-with-tailwind-css/" target="_blank">
+                          Read Tutorial
+                      </a>
+                      <span class="italic px-1.5">or</span>
+                      <a class="font-medium hover:underline text-indigo-500 flex items-center" href="https://github.com/cruip/cruip-tutorials/blob/main/animated-accordion/index.html" target="_blank" rel="noreferrer">
+                          <span>Download</span>
+                          <svg class="fill-indigo-400 ml-1" xmlns="http://www.w3.org/2000/svg" width="9" height="9">
+                              <path d="m1.649 8.514-.91-.915 5.514-5.523H2.027l.01-1.258h6.388v6.394H7.158l.01-4.226z" />
+                          </svg>
+                      </a>
+                  </div>
+                  <button class="text-slate-500 hover:text-slate-400 pl-2 ml-3 border-l border-slate-700" @click="bannerOpen = false">
+                      <span class="sr-only">Close</span>
+                      <svg class="w-4 h-4 shrink-0 fill-current" viewBox="0 0 16 16">
+                          <path d="M12.72 3.293a1 1 0 00-1.415 0L8.012 6.586 4.72 3.293a1 1 0 00-1.414 1.414L6.598 8l-3.293 3.293a1 1 0 101.414 1.414l3.293-3.293 3.293 3.293a1 1 0 001.414-1.414L9.426 8l3.293-3.293a1 1 0 000-1.414z" />
+                      </svg>
+                  </button>
+              </div>
+          </div>
+      
+      </div>
+      </div>
+
+
+
+
+
+
+      
+
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+      <div class="py-10 px-20">                  
+          <div class="mt-5 flex flex-row items-center px-12">
+            <div data-tabopen="tab1" class="tabbtn border-t-2  border-r-2 cursor-pointer border-l-2  border-purple-600 px-2 py-1 text-purple-700 font-medium">Tab 1</div>
+            <div data-tabopen="tab2" class="tabbtn border-b-2 cursor-pointer border-purple-600 px-2 py-1">Tab 2</div>
+            <div data-tabopen="tab3" class="tabbtn border-b-2 cursor-pointer border-purple-600  px-2 py-1">Tab 3</div>
+          </div>
+
+
+          <div id="tab1" class="tab mt-1 items-center px-12">
+            <h2 class="font-semibold text-2xl">Content of Tab 1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, blanditiis iste? Dignissimos commodi facilis vel nisi, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage</p>
+          </div>
+
+          <div id="tab2" class="tab mt-1 items-center px-12 hidden">
+            <h2 class="font-semibold text-2xl">Content of Tab 2</h2>
+            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. </p>
+          </div>
+
+          <div id="tab3" class="tab mt-1 items-center px-12 hidden">
+            <h2 class="font-semibold text-2xl">Content of Tab 3</h2>
+            <p> There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, t</p>
+          </div>
+      </div>
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="./script.js"></script>
+</body>
+</html>
